@@ -183,33 +183,34 @@
 				<section data-markdown>
 					# BOX-MODEL **SYNTAX**: 5
 
-					By default, **padding and border are added** to the width and height of a box:
+					By default, **padding and border** are **added** to the width and height of a box:
 
 					```css
 					main {
 						width: 70%;
-						box-sizing: border-box;
 						padding: 1em;
 						border: 2px;
 					}
-					/* width is 70% + 2em + 4px */
 					```
+
+					width is 70% **+** 2em **+** 4px
 				</section>
 
 				<section data-markdown>
 					# BOX-MODEL **SYNTAX**: 6
 
-					To make measurements easier, set `box-sixing` to `border-box` to **include padding and border** in the width and height:
+					With `box-sixing` set to to `border-box` **padding and border** are **included** in the width and height, making measurements easier:
 
 					```css
 					main {
-						width: 70%;
 						box-sizing: border-box;
+						width: 70%;
 						padding: 1em;
 						border: 2px;
 					}
-					/* width is still 70% */
 					```
+					
+					width is **contained** to 70%
 				</section>
 
 				<section data-markdown>
