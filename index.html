@@ -59,14 +59,14 @@
 				deveritt@dmu.ac.uk
 			</section>
 
-			<section>
-				<section data-markdown>
-          # HTML & CSS: **BOX MODEL**
-          
-          - **margin:** space *outside*
-          - **padding:** space *inside*
-          - **border:** line *around*
-        </section>
+			<section data-markdown>
+        # HTML & CSS: **BOX MODEL**
+        
+        ## ALL THESE SLIDES: **IMPORTANT!**
+        
+        - **margin:** space *outside*
+        - **padding:** space *inside*
+        - **border:** line *around*
       </section>
 
 			<section class="left-align">
@@ -83,12 +83,14 @@
 					
 					Makes an invisible **space around** an element  
 					usually set in **pixels**, **ems** or **percentages**:  
-					`1px`, `.5em`, `5%`
+					e.g. `1px` or `.5em` or `5%`
 					
 					Can be zero: `0`
 					
-					These elements have **default margins** (see lecture demo):  
-					`body h1..h6 p ul ol dl dd dir blockquote fieldset form`
+					The following HTML elements have **default margins**:  
+          `body h1..h6 p`  
+          `ul ol dl dd`  
+          `blockquote fieldset form`
 				</section>
 
 				<section data-markdown>
@@ -98,8 +100,8 @@
 
 					**background colour**/**background image** extend into padding
 
-					usually set in **pixels**, **ems** or **percentages**:  
-					`1px`, `.5em`, `5%`
+					also usually set in **pixels**, **ems** or **percentages**:  
+					e.g. `1px` or `.5em` or `5%`
 					
 					Can be zero: `0`
 				</section>
@@ -110,7 +112,7 @@
 					Goes **around the outside** of the box
 
 					usually set in **pixels**, sometimes **ems** or **percentages**:  
-					`1px`, `.5em`, `5%`
+					`1px` or can be `.5em` or `5%` (bit weird - flexy borders)
 					
 					Can be zero: `none`
 				</section>
@@ -118,38 +120,41 @@
 
 			<section class="left-align">
 				<section data-markdown>
-					# BOX-MODEL **SYNTAX**: 1
-					
-					## For both **margin** and **padding**
+          # BOX-MODEL **SYNTAX**: 1
+          
+          ## For both **margin** and **padding**
 
-					```css
-					header {
-						margin: 2px; /* a 2-pixel margin all round */
-						padding-top: 1em; /* one line of padding at top */
-						margin-left: 5%; /* 5% of available space to left */
-					}
-					/* you can use: -top -right -bottom -left */
-					```
+          Example for a `header` tag:
+          
+          ```css
+          header {
+            margin: 2px; /* a 2-pixel margin all round */
+            padding-top: 1em; /* one line of padding at top */
+            margin-left: 5%; /* 5% of available space to left */
+          }
+          /* you can use: -top -right -bottom -left */
+          ```
 				</section>
 
 				<section data-markdown>
-					# BOX-MODEL **SYNTAX**: 2
-					
-					**CSS shorthand**
-					- **4** values: **top** - **right** - **bottom** - **left** (clockface)
-					- **3** values: **top** - **left-right** - **bottom**
-					- **2** values: **top-bottom** - **left-right**
-
-					```css
-					header {
-						/* 4: top right bottom left: */
-						padding: 1em 10px .5em 5px;
-						/* 3: one line top, 10 pixels l-r, 1/2 line bottom */
-						padding: 1em 10px .5em;
-						/* 2: one line top+bottom, none left-right: */
-						margin: 1em 0;
-					}
-					```
+          # BOX-MODEL **SYNTAX**: 2
+          
+          **CSS shorthand** is simpler
+          
+          - **4** values: **top** - **right** - **bottom** - **left** (clockface)
+          - **3** values: **top** - **left-right** - **bottom**
+          - **2** values: **top-bottom** - **left-right**
+          
+          ```css
+          header {
+            /* 4: top right bottom left: */
+            padding: 1em 10px .5em 5px;
+            /* 3: one line top, 10 pixels l-r, 1/2 line bottom */
+            padding: 1em 10px .5em;
+            /* 2: one line top+bottom, none left-right: */
+            margin: 1em 0;
+          }
+          ```
 				</section>
 
 				<section data-markdown>
