@@ -10,24 +10,24 @@ a:link { border-bottom: 2px solid #666; }
 .reveal li code { color: #9f9; font-size: 1em }
 .reveal p code { color: #9f9; }
 .left-align { text-align: left; }
-.big-pic p img { width: 84%; }
 .reveal h1 { line-height: 1em; }
 .reveal ul { margin-bottom: .5em; }
 .reveal li { padding-top: 0.15em; }
 .reveal blockquote {
   text-align: left;
+  width: 100%;
   padding: .25em 1.5em .5em;
+}
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  box-shadow: none;
 }
 button,
 .ref-links a { font-size: 0.75em; }
 .crammed ul,
-.crammed ol,
-.crammed p { font-size: 0.9em; }
-.reveal .smalltext p,
-.reveal .smalltext li { font-size: 0.75em; }
-.reveal .small-head h1 { font-size: 2em; margin: 0; }
-.reveal .small-subheads h2 { font-size: 1.25em; margin: 0; }
-.reveal .small-subheads ul { padding-top: 0; }
+.crammed p { font-size: 0.8em; }
 .ext-links a[title^="ext:"]:after {
   position: relative;
   text-decoration: none;

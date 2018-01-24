@@ -134,9 +134,9 @@
 					# BOX-MODEL **SYNTAX**: 2
 					
 					**CSS shorthand**
-					- **4** values: **top, right, bottom, left** (clockface)
-					- **3** values: **top, left-right, bottom**
-					- **2** values: **top-bottom, left-right**
+					- **4** values: **top** - **right** - **bottom** - **left** (clockface)
+					- **3** values: **top** - **left-right** - **bottom**
+					- **2** values: **top-bottom** - **left-right**
 
 					```css
 					header {
@@ -199,7 +199,8 @@
 				<section data-markdown>
 					# BOX-MODEL **SYNTAX**: 6
 
-					With `box-sizing` set to to `border-box` the **padding and border** are **included** in the width and height, making measurements easier:
+					With `box-sizing` set to to `border-box`  
+					the **padding and border** are **included** in the width and height, making measurements easier:
 
 					```css
 					main {
@@ -267,7 +268,8 @@
 				<section data-markdown>
 					# BOX-MODEL **BORDER**: 3
 					
-					**CSS shorthand** for a single border style all around:
+					**CSS shorthand** for a single border style all around -  
+					this is the eaiest way:
 
 					```css
 					img {
@@ -280,8 +282,8 @@
 				<section data-markdown>
 					# BOX-MODEL **BORDER**: 4
 					
-					boxes don't have to look boxy.  
-					They can be a bit rounded…
+					boxes don't have to be **rectangular**.  
+					They can be as **rounded** as you like…
 
 					```css
 					img {
@@ -293,7 +295,7 @@
 				<section data-markdown>
 					# BOX-MODEL **BORDER**: 5
 					
-					Or have one, two or three sides rounded…
+					Or have **one**, **two** or **three** sides rounded…
 
 					```css
 					img {
@@ -311,7 +313,7 @@
 				<section data-markdown>
 					# BOX-MODEL **BORDER**: 6
 					
-					Or completely round…
+					Or be **completely round**…
 
 					```css
 					img {
@@ -322,7 +324,7 @@
 
 				<section class="borders" style="width: 100%; text-align: center;">
 					<h1>BOX-MODEL <strong>BORDER</strong>: 7</h1>
-					<p><strong>border-radius</strong>, rectangles/squares, <strong>no border-style/color</strong></p>
+					<p><strong>border-radius</strong> on rectangles/squares with <strong>no border</strong>:</p>
 					<div style="float: left;">
 						<div style="background: #fcc; text-align: right; padding-right: 1em; border-radius: 10px;">i’m 10px rounded, that square’s 50% rounded -></div>
 						<div style="background: #cfc; text-align: right; padding-right: 1em; border-top-left-radius: 100%;">one corner 100% rounded</div>
@@ -337,7 +339,7 @@
 
 				<section class="borders" style="width: 100%; text-align: center;">
 					<h1>BOX-MODEL <strong>BORDER</strong>: 8</h1>
-					<p><strong>border-radius</strong>, rectangles/squares, with<br><code>border-width: 4px; border-color: #666;</code></p>
+					<p>The same rectangles/squares <strong>with a border</strong>:<br><code>border: 4px solid #666;</code></p>
 					<div style="float: left;">
 						<div style="background: #fcc; text-align: right; border-width: 4px; border-style: solid; border-color: #666; padding-right: 1em; border-radius: 10px;">i’m 10px rounded, that square’s 50% rounded -></div>
 						<div style="background: #cfc; text-align: right; border-width: 4px; border-style: solid; border-color: #666; padding-right: 1em; border-top-left-radius: 100%;">one corner 100% rounded</div>
@@ -362,11 +364,21 @@
 			</section>
 
 			<section class="left-align">
+				<section data-markdown class="left-align">
+					# BOX-MODEL **3D**
+
+					If you could **see HTML boxes**, they'd look like this!  
+					Note the **layers** are **nested** just as in the **HTML**
+					
+					![3D box model image](images/3dview.png)
+				</section>
 				<section data-markdown>
 					# BOX-MODEL **DEMOS**
+					
+					code for the examples:
 
-					- The simple [margins and padding demo shown in the lecture](https://github.com/MEDS2007/box-model-basics)
-					- Code for the more [complex demo from the lecture](https://github.com/CTEC3905/boxmodel)
+					- [margins and padding example](https://github.com/MEDS2007/box-model-basics)
+					- Code for a more [complex box model example](https://github.com/CTEC3905/boxmodel)
 				</section>
 			</section>
 		</div>

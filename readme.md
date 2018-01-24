@@ -2,8 +2,10 @@
 
 ## Lecture 3
 
-**23 January 2017**
+**25 January 2017**
 
-This is the presentation for the third lecture on **the HTML box model**.
+This is the presentation for the third lecture, on **the HTML box model**.
 
 You can [view this presentation online](https://meds2007.github.io/lecture03/) on GitHub pages.
+
+The HTML/CSS/JavaScript slideshow library [reveal.js](http://lab.hakim.se/reveal-js/) was used to create the slides.
