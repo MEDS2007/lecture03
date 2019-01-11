@@ -1,14 +1,50 @@
 # MEDS2007
 
-## Lecture 3
+## Lecture 3 [see slides](https://meds2007.github.io/lecture03/)
 
-**25 January 2017**
+- [Box model …](https://meds2007.github.io/lecture03/#/1)
+  - [Box model: box dimensions](https://meds2007.github.io/lecture03/#/1/1)
+  - [Box model: margin](https://meds2007.github.io/lecture03/#/1/2)
+  - [Box model: padding](https://meds2007.github.io/lecture03/#/1/3)
+  - [Box model: border](https://meds2007.github.io/lecture03/#/1/4)
+  - [Box model: 3D view](https://meds2007.github.io/lecture03/#/1/5)
+- [CSS Box Model Syntax …](https://meds2007.github.io/lecture03/#/2)
+  - [CSS Box Model Syntax: CSS shorthand](https://meds2007.github.io/lecture03/#/2/1)
+  - [CSS Box Model Syntax: overrides and resets](https://meds2007.github.io/lecture03/#/2/2)
+  - [CSS Box Model Syntax: centre an block element](https://meds2007.github.io/lecture03/#/2/3)
+  - [CSS Box Model Syntax: padding/border added to width/height](https://meds2007.github.io/lecture03/#/2/4)
+  - [CSS Box Model Syntax: box-sizing: border-box](https://meds2007.github.io/lecture03/#/2/5)
+  - [CSS Box Model Syntax: display: inline-block](https://meds2007.github.io/lecture03/#/2/6)
+  - [CSS Box Model Syntax: references](https://meds2007.github.io/lecture03/#/2/7)
+- [CSS flexbox …](https://meds2007.github.io/lecture03/#/3)
+  - [CSS flexbox: horizontal alignment with justify-content](https://meds2007.github.io/lecture03/#/3/1)
+  - [CSS flexbox: vertical alignment with align-items](https://meds2007.github.io/lecture03/#/3/2)
+  - [CSS flexbox: arrange order with flex-direction](https://meds2007.github.io/lecture03/#/3/3)
+  - [CSS flexbox: example 1](https://meds2007.github.io/lecture03/#/3/4)
+  - [CSS flexbox: example 2](https://meds2007.github.io/lecture03/#/3/5)
+  - [CSS flexbox: example 3](https://meds2007.github.io/lecture03/#/3/6)
+- [CSS Box Model border 1 …](https://meds2007.github.io/lecture03/#/4)
+  - [CSS Box Model border 2](https://meds2007.github.io/lecture03/#/4/1)
+  - [CSS Box Model border 3](https://meds2007.github.io/lecture03/#/4/2)
+  - [CSS Box Model border 4](https://meds2007.github.io/lecture03/#/4/3)
+  - [CSS Box Model border 5](https://meds2007.github.io/lecture03/#/4/4)
+  - [CSS Box Model border: example 1](https://meds2007.github.io/lecture03/#/4/5)
+  - [CSS Box Model border: example 2](https://meds2007.github.io/lecture03/#/4/6)
+  - [CSS Box Model border: references](https://meds2007.github.io/lecture03/#/4/7)
+- [CSS Box Model border: demo code](https://meds2007.github.io/lecture03/#/5)
 
-This is the presentation for the third lecture, on **the HTML box model**.
 
-You can [view this presentation online](https://meds2007.github.io/lecture03/) on GitHub pages.
+  - [Cognitive Psychology](https://meds2007.github.io/lecture03/#/3/4)
+  - [Users, Content, Context …](https://meds2007.github.io/lecture03/#/3/5)
+  - [the information backbone of a website](https://meds2007.github.io/lecture03/#/3/7)
+  - [what is architecture: Building Scalable Web Sites …](https://meds2007.github.io/lecture03/#/3/8)
+- [Design: PARC Proximity, Alignment, Repetition, Contrast …](https://meds2007.github.io/lecture03/#/4)
+  - [Design: PARC, Proximity …](https://meds2007.github.io/lecture03/#/4/1)
+  - [Design: PARC, Alignment …](https://meds2007.github.io/lecture03/#/4/4)
+  - [Design: PARC, Alignment - grids …](https://meds2007.github.io/lecture03/#/4/6)
+  - [Design: PARC, Repetition …](https://meds2007.github.io/lecture03/#/4/12)
+  - [Design: PARC, Contrast …](https://meds2007.github.io/lecture03/#/4/15)
+- [Colour scheme chooser](https://meds2007.github.io/lecture03/#/5)
+- [Simplicity](https://meds2007.github.io/lecture03/#/6)
 
-The HTML/CSS/JavaScript slideshow library [reveal.js](http://lab.hakim.se/reveal-js/) was used to create the slides.
-
-<!-- 14oct2018: added shared section with CTEC3905 -->
-<!-- TODO: slide index as CTEC3905 -->
+Slides created in Markdown (plus HTML5, JavaScript and CSS) using [reveal.js](https://revealjs.com/).

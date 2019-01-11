@@ -1,6 +1,6 @@
 .reveal strong{ color: #5fabfc}
 a:link { border-bottom: 2px solid #666; }
-.reveal pre { margin: 0.5em 0; }
+.reveal pre { margin: .5em 0; }
 .reveal pre code {
   font-size: 1.25em;
   padding: 0 5px 0 10px;
@@ -10,31 +10,49 @@ a:link { border-bottom: 2px solid #666; }
 .reveal li code { color: #9f9; font-size: 1em }
 .reveal p code { color: #9f9; }
 .left-align { text-align: left; }
-.big-pic p img { width: 84%; }
 .reveal h1 { line-height: 1em; }
 .reveal ul { margin-bottom: .5em; }
-.reveal li { padding-top: 0.15em; }
+.reveal li { padding-top: .15em; }
 .reveal blockquote {
   text-align: left;
+  width: 100%;
   padding: .25em 1.5em .5em;
 }
+.reveal section img {
+  margin: 15px 0px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.reveal .smallimg img {
+  width: 50%
+}
 button,
-.ref-links a { font-size: 0.75em; }
+.ref-links a { font-size: .75em; }
 .crammed ul,
 .crammed ol,
-.crammed p { font-size: 0.9em; }
+.crammed p { font-size: .9em; }
 .reveal .smalltext p,
-.reveal .smalltext li { font-size: 0.75em; }
-.reveal .small-head h1 { font-size: 2em; margin: 0; }
+.reveal .smalltext ul,
+.reveal .smalltext table { font-size: .75em; }
+.reveal .smallhead h1 { font-size: 3em; margin: 0; }
 .reveal .small-subheads h2 { font-size: 1.25em; margin: 0; }
 .reveal .small-subheads ul { padding-top: 0; }
+.reveal p small { font-size: 60% !important; }
 .ext-links a[title^="ext:"]:after {
   position: relative;
   text-decoration: none;
-  font: 0.75em "FontAwesome";
+  font: .75em "FontAwesome";
   content: "\f08e";
-  bottom: 0.25em;
+  bottom: .25em;
 }
 .small-table table {
-  font-size: 0.58em;
+  font-size: .58em;
+}
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
 }
