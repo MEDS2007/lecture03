@@ -86,7 +86,69 @@
     [Lecture 3 slide index](https://github.com/MEDS2007/lecture03#meds2007)
   </section>
 
-  <!-- START: SHARED CTEC3905-MEDS2007 -->
+<!-- START: SHARED CTEC3905-MEDS2007 -->
+
+<!-- CSS RULES -->
+	<section class="left-align">
+		<section data-markdown>
+      # CSS RULES **1**
+      
+      ```css
+      selector { /* can be element, class… */
+        property: value;
+      }
+      ```
+      
+      inside the curly braces `{ }`, the **property** and **value**  
+      together make a CSS **declaration** e.g.
+      
+      ```css
+      main {
+        margin: 0 auto;
+      }
+      .sidebar {
+        width: 50%;
+      }
+      body .contact-page {
+        background: #666;
+      }
+      ```
+		</section>				
+		<section data-markdown>
+      # CSS RULES **2**
+      
+      A CSS **rule** inside `{}` can contain **multiple declarations**:
+      
+      
+      ```css
+      main {
+        margin: 0 auto;
+        width: 50%;
+        background: #666;
+        font-family: Tahoma, Helvetica, sans-serif;
+      }
+      ```
+
+      or be on **one line** (*harder to read* for developing):
+
+      ```css
+      main { margin: 0 auto; width: 50%; }
+      ```
+    </section>				
+    <section data-markdown>
+      # CSS RULES **3**
+
+      There are several **selector types**—they can also be:
+
+      - [pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) (e.g. `:hover` or `:checked`)
+      - [pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements) (e.g. `::before` or `::first-line`)
+
+      CSS **selector references**:
+
+      - [List of selectors](http://www.w3schools.com/cssref/css_selectors.asp) (W3Schools)
+      - [Interactive page of CSS selectors](http://www.w3schools.com/cssref/trysel.asp) (W3Schools)
+		</section>
+	</section>
 
   <!-- BOX MODEL INTRODUCTION -->
   <section class="left-align">
@@ -106,7 +168,7 @@
     - **padding:** space ***inside***
     - **border:** line ***around***
 
-    *inline HTML* (e.g. `a`, `span`) is also in a box, but **may not respond to margin or padding** unless you set `display: block;` on the element
+    *inline HTML* (e.g. `a` or `span`) also makes a box, but **may not show margin or padding** unless you set it’s CSS as `display: block;` or `display: inline-block;`
   </section>
   <section data-markdown>
     # BOX MODEL **3**: MARGIN
@@ -118,14 +180,14 @@
     Can be zero: `margin: 0;`
 
     **NOTE**: the following elements have **default margins**:  
-    `body h1..h6 p ul ol dl dd dir blockquote fieldset form`
+    `body`, `h1..h6`, `p`, `blockquote`, `form`, `fieldset`, and the list elements: `ul`, `ol`, `dl`, `dd`. You can reset these with CSS.
   </section>
   <section data-markdown>
     # BOX MODEL **4**: PADDING
 
     **Padding** is **inside** the box, **around** the box **content**
 
-    **background colour**/**background image** extend into padding
+    padding includes the **background colour** and **background image** of a box
 
     usually set in **pixels**, **ems** or **percentages**:  
     `1px`, `.5em`, `5%`
@@ -139,7 +201,8 @@
 
     best set in **pixels**, and easiest to set in one declaration:
     
-    `border: 1px solid silver;`
+    `border: 1px solid silver;`  
+    `border-bottom: 3px dotted #999;`
 
     Can be zero: `border-bottom: none;`
   </section>
@@ -156,7 +219,39 @@
   <!-- BOX MODEL SYNTAX -->
   <section class="left-align">
   <section data-markdown>
-    # BOX MODEL **SYNTAX**: 1
+    # BOX-MODEL **SYNTAX**: 1
+
+    By default, **padding and border** are **added** to the width and height of a box:
+
+    ```css
+    main {
+      width: 70%;
+      padding: 1em;
+      border: 2px;
+    }
+    ```
+
+    width is 70% **+** 2em **+** 4px
+  </section>
+  <section data-markdown>
+    # BOX-MODEL **SYNTAX**: 2
+
+    With `box-sizing` set to to `border-box` the **padding and border** are **included** in the width and height, making measurements easier:
+
+    ```css
+    main {
+      box-sizing: border-box;
+      width: 70%;
+      padding: 1em;
+      border: 2px;
+    }
+    ```
+
+    `border-box` means width **remains 70%**  
+    (not 70% + 2em + 4px)
+  </section>
+  <section data-markdown>
+    # BOX MODEL **SYNTAX**: 3
 
     ## For both **margin** and **padding**
 
@@ -170,7 +265,7 @@
     ```
   </section>
   <section data-markdown>
-    # BOX-MODEL **SYNTAX**: 2
+    # BOX-MODEL **SYNTAX**: 4
 
     **CSS shorthand**
     - **4** values: **top, right, bottom, left** (clockface)
@@ -189,7 +284,7 @@
     ```
   </section>
   <section data-markdown>
-    # BOX-MODEL **SYNTAX**: 3
+    # BOX-MODEL **SYNTAX**: 5
 
     Set top, right, bottom, left, then **reset one**
 
@@ -202,50 +297,19 @@
     The second line comes *after*—so **overrides**—the first
   </section>
   <section data-markdown>
-    # BOX-MODEL **SYNTAX**: 4
+    # BOX-MODEL **SYNTAX**: 6
 
     To **centre** an block element by itself, set the  
     **left** and **right** margins to `auto`:
 
     ```css
     header {
-      margin: 0 auto; /* zero top-bottom, l-r auto */
+      margin: 0 auto; /* zero top-bottom, auto l-r */
     }
     ```
-    `auto` fills the available space.
+    `auto` fills the available space to the left and right equally.
 
-    This is a common way to **centre a page design** in the **browser window**, although current designs prefer to **fill the browser window** completely.
-  </section>
-  <section data-markdown>
-    # BOX-MODEL **SYNTAX**: 5
-
-    By default, **padding and border** are **added** to the width and height of a box:
-
-    ```css
-    main {
-      width: 70%;
-      padding: 1em;
-      border: 2px;
-    }
-    ```
-
-    width is 70% **+** 2em **+** 4px
-  </section>
-  <section data-markdown>
-    # BOX-MODEL **SYNTAX**: 6
-
-    With `box-sizing` set to to `border-box` the **padding and border** are **included** in the width and height, making measurements easier:
-
-    ```css
-    main {
-      box-sizing: border-box;
-      width: 70%;
-      padding: 1em;
-      border: 2px;
-    }
-    ```
-
-    **IMPORTANT:** `border-box` means width **remains 70%**
+    This is also a common way to **centre a page design** in the **browser window**, although current designs prefer to **fill the browser window** completely.
   </section>
   <section data-markdown>
     # BOX-MODEL **SYNTAX**: 7
@@ -256,7 +320,7 @@
     a {
       display: inline-block;
     }
-    /* 'block' will turn inline elements to blocks */
+    /* 'block' makes inline 'a' elements into blocks */
     ```
 
     [W3Schools: HTML Block and Inline Elements](http://www.w3schools.com/html/html_blocks.asp)
@@ -274,7 +338,7 @@
   <section data-markdown>
     # FLEXBOX **1**: INTRODUCTION
 
-    CSS flexbox enables the **arrangement of boxes** inside a container:
+    **CSS flexbox** enables the **arrangement of boxes** inside a container:
 
     ```css
     .my-boxes {
@@ -317,7 +381,7 @@
   <section data-markdown>
       # FLEXBOX **5**: EXAMPLE
 
-      The **parent element** `.my-boxes` contains  
+      In this example, the **parent element** `.my-boxes` contains  
       several **child elements** to arrange:
 
       ```css
@@ -484,7 +548,7 @@
 
       Reference: [W3Schools: CSS Borders](http://www.w3schools.com/css/css_border.asp)
 
-      Or (if you must) play with [CSS shapes](https://css-tricks.com/examples/ShapesOfCSS/)
+      Or (if you like) play with [CSS shapes](https://css-tricks.com/examples/ShapesOfCSS/)
     </section>
   </section>
 
