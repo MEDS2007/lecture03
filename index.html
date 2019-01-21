@@ -444,20 +444,29 @@
     <section data-markdown>
       # BOX MODEL **BORDER**: 1
 
-      Draws a line around a box, has three parameters:
+      box outline with three parameters:  `width`, `style`, `color`
 
       ```css
       img {
-        border-color: white;
-        border-style: solid; /* none|solid|dotted|dashed */
         border-width: 2px;
+        border-style: solid; /* none|solid|dotted|dashed */
+        border-color: white;
       }
+      .mybox img {
+        border: 2px solid white; /* shorthand */
+      }
+      ```
+      …if the image is inside a **figure** tag with a **class "mybox"**:
+      ```
+      &lt;figure class="mybox"&gt
+        &lt;img src="images/mypic.png" alt="my face"&gt
+      &lt;/figure&gt
       ```
     </section>
     <section data-markdown>
       # BOX-MODEL **BORDER**: 2
 
-      Each property can have **one**, **two**, **three** or the  
+      Each property can have **one**, **two**, **three** or all  
       **four** “clockface” values: **top**, **right**, **bottom**, **left**.
 
       ```css
@@ -557,11 +566,19 @@
 	<section data-markdown class="left-align">
     # BOX-MODEL **DEMOS**
 
-    code for the examples:
+    if there’s time:
 
     - [margins and padding example](https://github.com/MEDS2007/box-model-basics)
-    - Code for a more [complex box model example](https://github.com/CTEC3905/boxmodel)
 	</section>
+    <!-- - Code for a more [complex box model example](https://github.com/CTEC3905/boxmodel) -->
+
+  <section data-markdown>
+    # THE END
+    
+    ## **THANK YOU** FOR YOUR **ATTENTION**
+
+    :-)
+  </section>
 </div>
 <div>
 
