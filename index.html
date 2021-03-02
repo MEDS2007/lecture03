@@ -79,9 +79,7 @@
 
     **Simon Mills (module leader)**: smills@dmu.ac.uk
 
-    **Fania Raczinski**: fania.raczinski@dmu.ac.uk
-
-    **Dave Everitt**: deveritt@dmu.ac.uk
+    **Dave Everitt (lectures)**: deveritt@dmu.ac.uk
 
     [Lecture 3 slide index](https://github.com/MEDS2007/lecture03#meds2007)
   </section>
@@ -332,113 +330,6 @@
     - Adjust sliders on an [Interactive box-model demo](http://guyroutledge.github.io/box-model/)
   </section>
   </section>
-
-  <!-- FLEXBOX -->
-  <section class="left-align">
-  <section data-markdown>
-    # FLEXBOX **1**: INTRODUCTION
-
-    **CSS flexbox** enables the **arrangement of boxes** inside a container:
-
-    ```css
-    .my-boxes {
-      display: flex;
-    }
-    ```
-  </section>
-  <section data-markdown>
-    # FLEXBOX **2**: HORIZONTAL
-
-    for **horizontal alignment** use the `justify-content:` property, with values:
-
-    - `flex-start` group items to **left** (the start) of container
-    - `flex-end` group items to **right** of container
-    - `center` group items in the **center** of a container
-    - `space-between` **distribute** items: first/last are left/right others are equally between
-    - `space-around` **distribute** and space items **evenly**
-  </section>
-  <section data-markdown>
-    # FLEXBOX **3**: VERTICAL
-
-    for **vertical alignment** use the `align-items:` property, with values:
-
-    - `flex-start` across top
-    - `flex-end` across bottom
-    - `center` in center
-    - `baseline` across baseline
-    - `stretch` space items or stretch item to fill
-  </section>
-  <section data-markdown>
-    # FLEXBOX **4**: ORDER
-
-    for the **order of boxes** use the `flex-direction:` property, with values:
-
-    - `row` flow left to right
-    - `row-reverse` flow right to left
-    - `column` stack top to bottom
-    - `column-reverse` stack bottom to top
-  </section>
-  <section data-markdown>
-      # FLEXBOX **5**: EXAMPLE
-
-      In this example, the **parent element** `.my-boxes` contains  
-      several **child elements** to arrange:
-
-      ```css
-      .my-boxes {
-        display: flex; /* set to display as flexbox */
-        justify-content: space-around; /* even spacing */
-        align-items: center; /* align vertical center */
-        flex-direction: row-reverse; /* wrap last-first */
-      }
-      ```
-  </section>
-  <section data-markdown>
-      # FLEXBOX **6**: EXAMPLE
-
-      The HTML just needs a **selector** e.g. `class="my-boxes"` for the CSS to **identify the element** to be **styled as flexbox**:
-
-      ```html
-      &lt;section class="my-boxes"&gt;
-        &lt;div&gt;Box one&lt;/div&gt;
-        &lt;div&gt;Box two&lt;/div&gt;
-        &lt;div&gt;Box three&lt;/div&gt;
-      &lt;/section&gt;
-      ```
-  </section>
-  <section>
-    <style>
-    .my-boxes {
-      display: flex; /* set to display as flexbox */
-      justify-content: space-around; /* even spacing */
-      align-items: center; /* align vertical center */
-      flex-direction: row-reverse; /* wrap last-first */
-      background:#ccc;
-      height: 300px;
-    }
-    .my-boxes div {
-      background: #9c5;
-      border: 1px solid #999;
-      width: 200px;
-      height: 200px;
-      text-align: center;
-      padding-top: 1em;
-    }
-    </style>
-    <h1>FLEXBOX <strong>7</strong>: EXAMPLE</h1>
-
-    <p>The <code>.my-boxes</code> section tag contains the boxes to arrange</p>
-
-    <div class="my-boxes">
-      <div>Box one</div>
-      <div>Box two</div>
-      <div>Box three</div>
-    </div>
-
-    <p>Try the CSS game <a href="http://www.flexboxdefense.com/">Flexbox Defence</a>.</p>
-  </section>
-  </section>
-
   <!-- BOX MODEL BORDER -->
   <section class="left-align">
     <section data-markdown>
@@ -559,6 +450,129 @@
 
       Or (if you like) play with [CSS shapes](https://css-tricks.com/examples/ShapesOfCSS/)
     </section>
+  </section>
+
+
+  <!-- FLEXBOX -->
+  <section class="left-align">
+  <section data-markdown>
+    # FLEXBOX **1**: INTRODUCTION
+
+    **CSS flexbox** enables the **arrangement of boxes** inside a container:
+
+    ```css
+    .my-boxes {
+      display: flex;
+    }
+    ```
+  </section>
+  <section data-markdown>
+    # FLEXBOX **2**: HORIZONTAL
+
+    for **horizontal alignment** use the `justify-content:` property, with values:
+
+    - `flex-start` group items to **left** (the start) of container
+    - `flex-end` group items to **right** of container
+    - `center` group items in the **center** of a container
+    - `space-between` **distribute** items: first/last are left/right others are equally between
+    - `space-around` **distribute** and space items **evenly**
+  </section>
+  <section data-markdown>
+    # FLEXBOX **3**: VERTICAL
+
+    for **vertical alignment** use the `align-items:` property, with values:
+
+    - `flex-start` across top
+    - `flex-end` across bottom
+    - `center` in center
+    - `baseline` across baseline
+    - `stretch` space items or stretch item to fill
+  </section>
+  <section data-markdown>
+    # FLEXBOX **4**: ORDER
+
+    for the **order of boxes** use the `flex-direction:` property, with values:
+
+    - `row` flow left to right
+    - `row-reverse` flow right to left
+    - `column` stack top to bottom
+    - `column-reverse` stack bottom to top
+  </section>
+  <section data-markdown>
+      # FLEXBOX **5**: EXAMPLE
+
+      In this example, the **parent element** `.my-boxes` contains  
+      several **child elements** to arrange:
+
+      ```css
+      .my-boxes {
+        display: flex; /* set to display as flexbox */
+        justify-content: space-around; /* even spacing */
+        align-items: center; /* align vertical center */
+        flex-direction: row-reverse; /* wrap last-first */
+      }
+      ```
+  </section>
+  <section data-markdown>
+      # FLEXBOX **6**: EXAMPLE
+
+      The HTML just needs a **selector** e.g. `class="my-boxes"` for the CSS to **identify the element** to be **styled as flexbox**:
+
+      ```html
+      &lt;section class="my-boxes"&gt;
+        &lt;div&gt;Box one&lt;/div&gt;
+        &lt;div&gt;Box two&lt;/div&gt;
+        &lt;div&gt;Box three&lt;/div&gt;
+      &lt;/section&gt;
+      ```
+  </section>
+  <section>
+    <style>
+    .my-boxes {
+      display: flex; /* set to display as flexbox */
+      justify-content: space-around; /* even spacing */
+      align-items: center; /* align vertical center */
+      flex-direction: row-reverse; /* wrap last-first */
+      background:#111;
+      height: 300px;
+    }
+    .my-boxes div {
+      background: #333;
+      color: #ddd;
+      border: 1px solid #ddd;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      padding-top: 1em;
+    }
+    </style>
+    <h1>FLEXBOX <strong>7</strong>: EXAMPLE</h1>
+
+    <p>The <code>.my-boxes</code> section tag contains the boxes to arrange</p>
+
+    <div class="my-boxes">
+      <div>Box one</div>
+      <div>Box two</div>
+      <div>Box three</div>
+    </div>
+
+    <p>Try the CSS game <a href="http://www.flexboxdefense.com/">Flexbox Defence</a>.</p>
+  </section>
+  <section data-markdown>
+      # FLEXBOX **8**: CHEATSHEET
+
+      This cheatsheet lists all the most useful **Flexbox** *properties* and their *values*:
+      
+      https://daveeveritt.github.io/flexbox-cheatsheet/
+      
+      ```css
+      /* CSS syntax reminder */
+      selector { /* element, .class, #ID */
+        property: value;
+      }
+      ```
+      
+  </section>
   </section>
 
 <!-- END SHARED: CTEC3905-MEDS2007 -->
