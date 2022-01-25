@@ -79,18 +79,18 @@
 
     **Simon Mills (module leader)**: smills@dmu.ac.uk
 
-    **Dave Everitt (lectures)**: deveritt@dmu.ac.uk
-
     [Lecture 3 slide index](https://github.com/MEDS2007/lecture03#meds2007)
   </section>
 
 <!-- START: SHARED CTEC3905-MEDS2007 -->
 
 <!-- CSS RULES -->
-	<section class="left-align">
+	<section class="left-align smalltext">
 		<section data-markdown>
       # CSS RULES **1**
       
+      the **selector** is the element to be styled:
+
       ```css
       selector { /* can be element, class… */
         property: value;
@@ -107,7 +107,7 @@
       .sidebar {
         width: 50%;
       }
-      body .contact-page {
+      .contact-page form { /* the form on the contact page */
         background: #666;
       }
       ```
@@ -115,8 +115,7 @@
 		<section data-markdown>
       # CSS RULES **2**
       
-      A CSS **rule** inside `{}` can contain **multiple declarations**:
-      
+      A CSS **rule** inside `{}` can contain **multiple** CSS **declarations**:
       
       ```css
       main {
@@ -127,7 +126,7 @@
       }
       ```
 
-      or be on **one line** (*harder to read* for developing):
+      or be on **one line** (*harder to read* when developing):
 
       ```css
       main { margin: 0 auto; width: 50%; }
