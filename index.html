@@ -119,7 +119,7 @@
       
       ```css
       main {
-        margin: 0 auto; /* centres the element on the page */
+        margin: 10px; /* 10 pixels all round */
         width: 80%; /* always 80% of the screen width */
         background: #eee;
         font-family: Tahoma, Helvetica, sans-serif;
@@ -167,30 +167,33 @@
 
     *inline* HTML elements (e.g. `a` or `span` tags) **are also boxes**, but to make their **margin or padding** visible you need CSS rules that turn them into **block elements**:
     
-    `display: block;` or `display: inline-block;`
+    `display: block;` for a line-break before and after  
+    or  
+    `display: inline-block;` to keep them inline, e.g. links in text
   </section>
   <section data-markdown>
     # BOX MODEL **3**: MARGIN
 
-    The **margin** makes an invisible **space around** an element  
-    usually set in **pixels**, **ems** or **percentages**:  
-    `1px`, `.5em`, `5%`
+    The **margin** makes an invisible **space around** an element
 
-    Can be zero: `margin: 0;`
+    It is usually set in **pixels**, **ems** or **percentages**:  
+    `margin: 6px;` (or `.5em` or `5%`…)
 
-    **NOTE**: the following elements have **default margins**:  
-    `body`, `h1..h6`, `p`, `blockquote`, `form`, `fieldset`, and the list elements: `ul`, `ol`, `dl`, `dd`. You can reset these with CSS.
+    Or **no margin** with `margin: 0;` which removes any **default margins** that browsers apply to the following elements:
+    
+    `body`, `h1` to `h6`, `p`, `blockquote`, `form`, `fieldset`,  
+    and the list elements: `ul`, `ol`, `dl`, `dd`
   </section>
   <section data-markdown>
     # BOX MODEL **4**: PADDING
 
-    **Padding** is **inside** the box, **around** the box **content**
+    **Padding** is **around** the box **content** but still **inside** the box,
 
     padding includes the **background colour** and **background image** of a box
 
     usually set in **pixels**, **ems** or **percentages**:  
-    `1px`, `.5em`, `5%`
-
+    `padding: 4px;` (or `1em` or `5%`…)
+    
     Can be zero: `padding: 0;`
   </section>
   <section data-markdown>
@@ -203,7 +206,7 @@
     `border: 1px solid silver;`  
     `border-bottom: 3px dotted #999;`
 
-    Can be zero: `border-bottom: none;`
+    Can be zero: `border-top: none;`
   </section>
   <section data-markdown>
     # BOX MODEL **6**: 3D
@@ -225,12 +228,12 @@
     ```css
     main {
       width: 70%;
-      padding: 1em;
+      padding: 1em; /* 1em; the height of one line of text */
       border: 2px;
     }
     ```
 
-    width is 70% **+** 2em **+** 4px
+    width is 70% **+** 2em **+** 4px (very hard to work with)
   </section>
   <section data-markdown>
     # BOX-MODEL **SYNTAX**: 2
@@ -246,8 +249,8 @@
     }
     ```
 
-    `border-box` means width **remains 70%**  
-    (not 70% + 2em + 4px)
+    `border-box` means the width **remains 70%**  
+    (*not* 70% + 2em + 4px)
   </section>
   <section data-markdown>
     # BOX MODEL **SYNTAX**: 3
@@ -275,7 +278,7 @@
     header {
       padding: 1em 10px .5em 5px;
       /* 4: top right bottom left: */
-      padding: 1em 10px .5em; /* an em is one line-height */
+      padding: 1em 10px .5em;
       /* 3: top 1em, l-r 10 pixels, bottom .5em */
       margin: 1em 0;
       /* 2: one line top+bottom, none left-right: */
@@ -285,7 +288,7 @@
   <section data-markdown>
     # BOX-MODEL **SYNTAX**: 5
 
-    Set top, right, bottom, left, then **reset one**
+    You can set top, right, bottom, left, then **reset one**
 
     ```css
     header {
@@ -293,7 +296,10 @@
       margin-top: 0; /* …but no top margin */
     }
     ```
-    The second line comes *after*—so **overrides**—the first
+    **IMPORTANT**: The second line comes *after*—so  
+    `margin-top` **overrides** any rule above it.
+
+    The other margins remain at `10px`
   </section>
   <section data-markdown>
     # BOX-MODEL **SYNTAX**: 6
@@ -308,19 +314,21 @@
     ```
     `auto` fills the available space to the left and right equally.
 
-    This is also a common way to **centre a page design** in the **browser window**, although current designs prefer to **fill the browser window** completely.
+    This is also a common way to **centre a page design** in the **browser window**, although many current designs prefer to **fill the browser window** completely.
   </section>
   <section data-markdown>
     # BOX-MODEL **SYNTAX**: 7
 
-    `display: inline-block` turns **inline elements** into **blocks that line up horizontally**, often for `a` or `li` tags in menus or the `img` tag for images.
+    `display: inline-block` turns **inline elements** into **blocks that line up horizontally**.  
+    For instance, with `a` or `li` tags in menus (inside `nav` tags):
 
     ```css
-    a {
+    nav a { /* a tags inside a nav tag */
       display: inline-block;
     }
-    /* 'block' makes inline 'a' elements into blocks */
     ```
+    
+    in the rule above, 'block' makes inline `a` elements into blocks, so they can show `padding` and `margin` rules.
 
     [W3Schools: HTML Block and Inline Elements](http://www.w3schools.com/html/html_blocks.asp)
   </section>
@@ -339,13 +347,13 @@
       box outline with three parameters:  `width`, `style`, `color`
 
       ```css
-      img {
+      .mybox img { /* separately: */
         border-width: 2px;
-        border-style: solid; /* none|solid|dotted|dashed */
+        border-style: solid; /* or: none|solid|dotted|dashed */
         border-color: white;
       }
-      .mybox img {
-        border: 2px solid white; /* shorthand */
+      .mybox img { /* shorthand: */
+        border: 2px solid white; /* width/style/color */
       }
       ```
       …if the image is inside a **figure** tag with a **class "mybox"**:
@@ -373,7 +381,7 @@
     <section data-markdown>
       # BOX-MODEL **BORDER**: 3
 
-      **CSS shorthand** for a single border style all around:
+      or you can use **CSS shorthand** to set a single border style all around an element:
 
       ```css
       img {
@@ -393,7 +401,7 @@
       }
 
       img {
-        border-radius: 50%; /* totally round */
+        border-radius: 50%; /* totally round or oval */
       }
       ```
     </section>
@@ -413,12 +421,14 @@
         /* an arc (if height=width) */
       }
       ```
+
+      Here are some examples…
     </section>
     <section class="borders radius-demo left-align">
     	<h1>BOX-MODEL <strong>BORDER</strong>: 6</h1>
-    	<p><strong>border-radius</strong>, rectangles/squares, with<br><code>border-width: 4px; border-color: #666;</code></p>
+    	<p><strong>border-radius</strong>, rectangles and squares, with<br><code>border-width: 4px; border-color: #666;</code></p>
     	<div class="float-l radius-demo-div-l border">
-    		<div class="radius-10">i’m 10px rounded, that square’s 50% rounded -></div>
+    		<div class="radius-10">I’m 10px rounded, that square’s 50% rounded -></div>
     		<div class="radius-100">one corner 100% rounded</div>
     		<div class="radius-50">two corners 50% rounded</div>
     	</div>
@@ -430,9 +440,9 @@
     </section>
     <section class="borders radius-demo left-align">
     	<h1>BOX-MODEL <strong>BORDER</strong>: 7</h1>
-    	<p><strong>border-radius</strong>, rectangles/squares, <strong>no border-style/color</strong></p>
+    	<p>The same <strong>border-radius</strong> again with <strong>no border styles</strong></p>
     	<div class="float-l radius-demo-div-l">
-    		<div class="radius-10">i’m 10px rounded, that square’s 50% rounded -></div>
+    		<div class="radius-10">I’m 10px rounded, that square’s 50% rounded -></div>
     		<div class="radius-100">one corner 100% rounded</div>
     		<div class="radius-50">two corners 50% rounded</div>
     	</div>
@@ -459,45 +469,53 @@
   <section data-markdown>
     # FLEXBOX **1**: INTRODUCTION
 
-    **CSS flexbox** enables the **arrangement of boxes** inside a container:
+    **CSS flexbox** is for **arranging boxes** inside a container.
+
+    For example, for a container that has a class `my-boxes`,  
+    first **apply the flexbox rule** to the **container element**:
 
     ```css
     .my-boxes {
       display: flex;
     }
     ```
+
+    The **default** style is to arrange the boxes in a horizontal row,  
+    but other rules can be added to **arrange them differently**…
   </section>
   <section data-markdown>
     # FLEXBOX **2**: HORIZONTAL
 
-    for **horizontal alignment** use the `justify-content:` property, with values:
+    for **horizontal alignment** use the `justify-content:`  
+    property, with values:
 
-    - `flex-start` group items to **left** (the start) of container
-    - `flex-end` group items to **right** of container
-    - `center` group items in the **center** of a container
-    - `space-between` **distribute** items: first/last are left/right others are equally between
-    - `space-around` **distribute** and space items **evenly**
+    - `flex-start;` group items to **left** (the start) of container
+    - `flex-end;` group items to **right** of container
+    - `center;` group items in the **center** of a container
+    - `space-between;` **distribute** items: first/last are left/right others are equally between
+    - `space-around;` **distribute** and space items **evenly**
   </section>
   <section data-markdown>
     # FLEXBOX **3**: VERTICAL
 
-    for **vertical alignment** use the `align-items:` property, with values:
+    for **vertical alignment** use the `align-items:`  
+    property, with values:
 
-    - `flex-start` across top
-    - `flex-end` across bottom
-    - `center` in center
-    - `baseline` across baseline
-    - `stretch` space items or stretch item to fill
+    - `flex-start;` across top
+    - `flex-end;` across bottom
+    - `center;` in center
+    - `baseline;` across baseline
+    - `stretch;` space items, or stretch item to fill
   </section>
   <section data-markdown>
     # FLEXBOX **4**: ORDER
 
     for the **order of boxes** use the `flex-direction:` property, with values:
 
-    - `row` flow left to right
-    - `row-reverse` flow right to left
-    - `column` stack top to bottom
-    - `column-reverse` stack bottom to top
+    - `row;` flow left to right
+    - `row-reverse;` flow right to left
+    - `column;` stack top to bottom
+    - `column-reverse;` stack bottom to top
   </section>
   <section data-markdown>
       # FLEXBOX **5**: EXAMPLE
@@ -508,7 +526,7 @@
       ```css
       .my-boxes {
         display: flex; /* set to display as flexbox */
-        justify-content: space-around; /* even spacing */
+        justify-content: space-around; /* horizontal spacing */
         align-items: center; /* align vertical center */
         flex-direction: row-reverse; /* wrap last-first */
       }
@@ -557,18 +575,19 @@
       <div>Box three</div>
     </div>
 
-    <p>Try the CSS game <a href="http://www.flexboxdefense.com/">Flexbox Defence</a>.</p>
+    <p>To learn more, try the CSS game <a href="http://www.flexboxdefense.com/">Flexbox Defence</a>!</p>
   </section>
   <section data-markdown>
       # FLEXBOX **8**: CHEATSHEET
 
-      This cheatsheet lists all the most useful **Flexbox** *properties* and their *values*:
+      Here’s a link to a [Flexbox Cheatsheet or quick reference](https://daveeveritt.github.io/flexbox-cheatsheet/) that lists all the most useful **Flexbox** *properties* and their *values*.
       
-      https://daveeveritt.github.io/flexbox-cheatsheet/
+      ---
+
+      CSS syntax reminder:
       
       ```css
-      /* CSS syntax reminder */
-      selector { /* element, .class, #ID */
+      selector { /* element, .class, #id */
         property: value;
       }
       ```
@@ -584,6 +603,10 @@
     if there’s time:
 
     - [margins and padding example](https://meds2007.github.io/box-model-basics/)
+
+    For example: right-click on “A Page Header” and choose “Inspect” or “Inspect Element” to **turn on the disabled rule** `margin: 0;`.
+    
+    Thyere are **disabled CSS rules** on other elements—turn them on (and off) to demonstrate the various **box model settings**.
 	</section>
     <!-- - Code for a more [complex box model example](https://github.com/CTEC3905/boxmodel) -->
 </div>
