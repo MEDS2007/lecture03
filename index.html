@@ -119,9 +119,9 @@
       
       ```css
       main {
-        margin: 0 auto;
-        width: 50%;
-        background: #666;
+        margin: 0 auto; /* centres the element on the page */
+        width: 80%; /* always 80% of the screen width */
+        background: #eee;
         font-family: Tahoma, Helvetica, sans-serif;
       }
       ```
@@ -156,16 +156,18 @@
 
     ![A diagram of the box model](images/boxmodel.png)
   </section>
-  <section data-markdown>
+  <section data-markdown class="smalltext">
     # BOX MODEL **2**
     
-    The **box dimensions** are controlled by the:
+    The **dimensions** of the box are controlled by the:
     
     - **margin:** space ***outside***
     - **padding:** space ***inside***
     - **border:** line ***around***
 
-    *inline HTML* (e.g. `a` or `span`) also makes a box, but **may not show margin or padding** unless you set it’s CSS as `display: block;` or `display: inline-block;`
+    *inline* HTML elements (e.g. `a` or `span` tags) **are also boxes**, but to make their **margin or padding** visible you need CSS rules that turn them into **block elements**:
+    
+    `display: block;` or `display: inline-block;`
   </section>
   <section data-markdown>
     # BOX MODEL **3**: MARGIN
